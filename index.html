@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Solar System - Three.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas for the Three.js Scene -->
+    <canvas id="bg"></canvas>
+
+    <!-- UI Panel for Controls -->
+    <div class="ui-panel">
+        <!-- Inside the .ui-panel div -->
+<div class="main-controls">
+    <!-- ADD an ID to the h1 tag -->
+    <h1 id="drag-handle">Solar System Controls</h1>
+    <div class="buttons">
+        <button id="pause-resume-btn">Pause</button>
+        <button id="theme-toggle-btn">Dark Mode</button>
+    </div>
+</div>
+        <div id="planet-controls" class="planet-controls-container">
+            <!-- Planet speed sliders will be dynamically added here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Tooltip for Planet Info -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- Import Three.js from a CDN for simplicity -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
